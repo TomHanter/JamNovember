@@ -624,6 +624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 1115674872}
+  Gex: {fileID: 0}
 --- !u!1001 &912605487
 PrefabInstance:
   m_ObjectHideFlags: 0

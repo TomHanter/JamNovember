@@ -8,31 +8,28 @@ public class TileMapClick : MonoBehaviour
 {
     public Transform Player;
 
-    private Tilemap map;
-    private Vector3 targetPosition;
-    private Camera mainCamera;
-
     void Start()
     {
-        map = GetComponent<Tilemap>();
-        mainCamera = Camera.main;
-        targetPosition = transform.position;
-    }
 
-    
+    }
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Vector3 clickWorldPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, mainCamera.transform.position.z));
-
-            Vector3Int clickCellPosition = map.WorldToCell(clickWorldPosition);
-
-
-            targetPosition = map.CellToWorld(clickCellPosition);
-            targetPosition.y = transform.position.y;
-
-            Debug.Log(clickCellPosition);
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if(Physics.Raycast(ray, out hit))
+            {
+                var gameObject = hit.collider.gameObject;
+               var rb = gameObject.GetComponent<Rigidbody>();
+                Collider collider = rb.GetComponent<Collider>();
+                if(rb != null)
+                {
+                    Vector3 center = collider.bounds.center;
+                    center.y += 0.3f;
+                    Player.transform.position = center;
+                }
+            }
         }
     }
 }
