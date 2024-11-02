@@ -9,6 +9,7 @@ TagManager:
   - FireCell
   - GrassCell
   - BorderCell
+  - WinCell
   layers:
   - Default
   - TransparentFX

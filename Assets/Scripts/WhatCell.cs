@@ -1,9 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class WhatCell : MonoBehaviour
 {
+    private UIPanel _uiPanel;
+
+    private void Awake()
+    {
+        _uiPanel = Camera.main.GetComponent<UIPanel>();
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         switch (collision.gameObject.tag)
@@ -28,38 +36,12 @@ public class WhatCell : MonoBehaviour
                 StopPlayer(collision.gameObject);
                 break;
 
+            case "WinCell":
+                WinPoint(collision.gameObject);
+                break;
+
             default:
                 HandleDefaultCollision(collision.gameObject);
-                break;
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        switch (other.gameObject.tag)
-        {
-            case "LavaCell":
-                HealPlayer(other.gameObject);
-                break;
-
-            case "WaterCell":
-                Die(other.gameObject);
-                break;
-
-            case "FireCell":
-                //HealPlayer(collision.gameObject);
-                break;
-
-            case "GrassCell":
-                TakeDamage(other.gameObject);
-                break;
-
-            case "BorderCell":
-                StopPlayer(other.gameObject);
-                break;
-
-            default:
-                HandleDefaultCollision(other.gameObject);
                 break;
         }
     }
@@ -89,7 +71,14 @@ public class WhatCell : MonoBehaviour
     private void Die(GameObject powerUp)
     {
         Debug.Log("player die");
+        _uiPanel.Lose();
         // Логика для обработки усиления, например, увеличение силы или скорости
+    }
+
+    private void WinPoint(GameObject powerUp)
+    {
+        Debug.Log("player win");
+        _uiPanel.Win();
     }
 
     private void HandleDefaultCollision(GameObject other)
