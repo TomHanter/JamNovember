@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class WhatCell : MonoBehaviour
 {
     private UIPanel _uiPanel;
+    private HexogenChange _changeMesh;
 
     private void Awake()
     {
@@ -16,23 +17,24 @@ public class WhatCell : MonoBehaviour
     {
         switch (collision.gameObject.tag)
         {
-            case "LavaCell":
+            case "LavaCell"://хп жизни?
                 HealPlayer(collision.gameObject);
                 break;
 
-            case "WaterCell":
+            case "WaterCell":// смерть
                 Die(collision.gameObject);
                 break;
 
-            case "FireCell":
+            case "FireCell":// изменяемый блок?
                 //HealPlayer(collision.gameObject);
                 break;
 
-            case "GrassCell":
+            case "GrassCell":// нейтральный блок меняется на лава блок + получения урона
                 TakeDamage(collision.gameObject);
+                _changeMesh.ChangerMeshGex();
                 break;
 
-            case "BorderCell":
+            case "BorderCell"://????
                 StopPlayer(collision.gameObject);
                 break;
 

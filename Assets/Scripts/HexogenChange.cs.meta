@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 879ce34ae512e3843a5d34172918bbda
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _modelToChangeGrass: {instanceID: 0}
+  - _modelToUseChangeFire: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
