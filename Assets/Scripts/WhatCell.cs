@@ -4,16 +4,27 @@ using UnityEngine;
 
 public class WhatCell : MonoBehaviour
 {
+    private int hp = 3;
+
+    void Update()
+    {
+        if (hp <= 0)
+        {
+            Die();
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
+        //Debug.Log("collision");
         switch (collision.gameObject.tag)
         {
             case "LavaCell":
-                HealPlayer(collision.gameObject);
+                HealPlayer();
                 break;
 
             case "WaterCell":
-                Die(collision.gameObject);
+                Die();
                 break;
 
             case "FireCell":
@@ -21,7 +32,7 @@ public class WhatCell : MonoBehaviour
                 break;
 
             case "GrassCell":
-                TakeDamage(collision.gameObject);
+                TakeDamage();
                 break;
 
             case "BorderCell":
@@ -34,40 +45,12 @@ public class WhatCell : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        switch (other.gameObject.tag)
-        {
-            case "LavaCell":
-                HealPlayer(other.gameObject);
-                break;
-
-            case "WaterCell":
-                Die(other.gameObject);
-                break;
-
-            case "FireCell":
-                //HealPlayer(collision.gameObject);
-                break;
-
-            case "GrassCell":
-                TakeDamage(other.gameObject);
-                break;
-
-            case "BorderCell":
-                StopPlayer(other.gameObject);
-                break;
-
-            default:
-                HandleDefaultCollision(other.gameObject);
-                break;
-        }
-    }
-
     // Обработчик столкновения с врагом
-    private void TakeDamage(GameObject enemy)
+    private void TakeDamage()
     {
+        Debug.Log($"hp {hp}");
         Debug.Log("damage received");
+        hp--;
         // Здесь можно добавить логику для врага, например, уменьшение здоровья
     }
 
@@ -79,14 +62,16 @@ public class WhatCell : MonoBehaviour
     }
 
     // Обработчик столкновения с усилением
-    private void HealPlayer(GameObject powerUp)
+    private void HealPlayer()
     {
+        Debug.Log($"hp {hp}");
         Debug.Log("hp heal");
+        hp += 3;
         // Логика для обработки усиления, например, увеличение силы или скорости
     }
 
     // Обработчик столкновения с усилением
-    private void Die(GameObject powerUp)
+    private void Die()
     {
         Debug.Log("player die");
         // Логика для обработки усиления, например, увеличение силы или скорости
