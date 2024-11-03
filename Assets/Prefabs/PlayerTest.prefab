@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 3407239563743786536}
   - component: {fileID: 1660035696789018854}
   - component: {fileID: 3251959926442475624}
+  - component: {fileID: 2264876172788662327}
   m_Layer: 0
-  m_Name: Player
+  m_Name: PlayerTest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 7899163747638292159}
   serializedVersion: 2
   m_LocalRotation: {x: 0.010733539, y: 0, z: 0, w: 0.9999424}
-  m_LocalPosition: {x: 5.1958594, y: 6, z: 0}
+  m_LocalPosition: {x: 9.301, y: 0.472, z: -12.711}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3d69ea853365bac45bd882795d9b481e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -133,3 +134,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2264876172788662327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7899163747638292159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f426599b90d0fc145b72f4d794a6a206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _textHp: {fileID: 0}
+  _HpPlus: 5
