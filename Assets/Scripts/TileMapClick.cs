@@ -9,10 +9,11 @@ using UnityEngine.Tilemaps;
 public class TileMapClick : MonoBehaviour
 {
     [SerializeField] private Transform _player;
+    private ButtonFX _buttonFX;
     public delegate void PlayerMovedEventHandler(Vector3 newPosition);
     public event PlayerMovedEventHandler OnPlayerMoved;
 
-    void Update()
+    public void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {

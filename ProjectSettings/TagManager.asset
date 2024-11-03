@@ -10,6 +10,7 @@ TagManager:
   - GrassCell
   - BorderCell
   - WinCell
+  - LavaPlusHp
   layers:
   - Default
   - TransparentFX

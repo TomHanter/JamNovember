@@ -5,17 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class UIPanel : MonoBehaviour
 {
-    [SerializeField] private GameObject panelWin;
-    [SerializeField] private GameObject panelLose;
+    [SerializeField] private GameObject _panelWin;
+    [SerializeField] private GameObject _panelLose;
+    private float _restartDelay = 0.5f;
 
     public void Win()
     {
-        panelWin.SetActive(true);
+        _panelWin.SetActive(true);
     }
 
     public void Lose()
     {
-        panelLose.SetActive(true);
+        _panelLose.SetActive(true);
+    }
+
+    public void OnButtonResetScene()
+    {
+        Invoke(nameof(ResetScene), _restartDelay);
     }
 
     public void ResetScene()

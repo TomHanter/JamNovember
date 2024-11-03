@@ -6,9 +6,10 @@ using UnityEngine.UIElements;
 
 public class WhatCell : MonoBehaviour
 {
+    [SerializeField] private TMP_Text _textHp;
+    [SerializeField] private int _HpPlus = 5;
     private UIPanel _uiPanel;
     private HexogenChange _changeMesh;
-    [SerializeField] private TMP_Text _textHp;
     private int hp = 3;
 
     private void Awake()
@@ -20,7 +21,6 @@ public class WhatCell : MonoBehaviour
             Debug.LogWarning("HexogenChange component not found on this object. Make sure to assign it.");
         }
     }
-
     private void Start()
     {
         _textHp.text = hp.ToString();
@@ -28,8 +28,6 @@ public class WhatCell : MonoBehaviour
 
     void Update()
     {
-       
-
         if (hp <= 0)
         {
             Die();
@@ -63,6 +61,10 @@ public class WhatCell : MonoBehaviour
                 WinPoint(collision.gameObject);
                 break;
 
+            case "LavaPlusHp":
+                Destroy(collision.gameObject);
+                    break;
+
             default:
                 HandleDefaultCollision(collision.gameObject);
                 break;
@@ -90,7 +92,8 @@ public class WhatCell : MonoBehaviour
     private void HealPlayer()
     {
         Debug.Log("hp heal");
-        hp += 3;
+        hp += _HpPlus;
+        _textHp.text = hp.ToString();
         Debug.Log($"hp {hp}");
         // Логика для обработки усиления, например, увеличение силы или скорости
     }
