@@ -7,29 +7,43 @@ public class WhatCell : MonoBehaviour
 {
     private UIPanel _uiPanel;
     private HexogenChange _changeMesh;
+    private int hp = 3;
 
     private void Awake()
     {
         _uiPanel = Camera.main.GetComponent<UIPanel>();
     }
 
+    void Update()
+    {
+        if (hp <= 0)
+        {
+            Die();
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
+        //Debug.Log("collision");
         switch (collision.gameObject.tag)
         {
-            case "LavaCell"://õï æèçíè?
+            case "LavaCell"://Ñ…Ð¿ Ð¶Ð¸Ð·Ð½Ð¸?
                 HealPlayer(collision.gameObject);
                 break;
 
-            case "WaterCell":// ñìåðòü
-                Die(collision.gameObject);
+            case "WaterCell":// ÑÐ¼ÐµÑ€Ñ‚ÑŒ
+                Die();
                 break;
 
-            case "FireCell":// èçìåíÿåìûé áëîê?
+            case "LavaCell":
+                HealPlayer();
+                break;
+
+            case "FireCell":// Ð¸Ð·Ð¼ÐµÐ½ÑÐµÐ¼Ñ‹Ð¹ Ð±Ð»Ð¾Ðº?
                 //HealPlayer(collision.gameObject);
                 break;
 
-            case "GrassCell":// íåéòðàëüíûé áëîê ìåíÿåòñÿ íà ëàâà áëîê + ïîëó÷åíèÿ óðîíà
+            case "GrassCell":// Ð½ÐµÐ¹Ñ‚Ñ€Ð°Ð»ÑŒÐ½Ñ‹Ð¹ Ð±Ð»Ð¾Ðº Ð¼ÐµÐ½ÑÐµÑ‚ÑÑ Ð½Ð° Ð»Ð°Ð²Ð° Ð±Ð»Ð¾Ðº + Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¸Ñ ÑƒÑ€Ð¾Ð½Ð°
                 TakeDamage(collision.gameObject);
                 _changeMesh.ChangerMeshGex();
                 break;
@@ -48,33 +62,37 @@ public class WhatCell : MonoBehaviour
         }
     }
 
-    // Îáðàáîò÷èê ñòîëêíîâåíèÿ ñ âðàãîì
-    private void TakeDamage(GameObject enemy)
+    // ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸Ðº ÑÑ‚Ð¾Ð»ÐºÐ½Ð¾Ð²ÐµÐ½Ð¸Ñ Ñ Ð²Ñ€Ð°Ð³Ð¾Ð¼
+    private void TakeDamage()
     {
+        Debug.Log($"hp {hp}");
         Debug.Log("damage received");
-        // Çäåñü ìîæíî äîáàâèòü ëîãèêó äëÿ âðàãà, íàïðèìåð, óìåíüøåíèå çäîðîâüÿ
+        hp--;
+        // Ð—Ð´ÐµÑÑŒ Ð¼Ð¾Ð¶Ð½Ð¾ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð»Ð¾Ð³Ð¸ÐºÑƒ Ð´Ð»Ñ Ð²Ñ€Ð°Ð³Ð°, Ð½Ð°Ð¿Ñ€Ð¸Ð¼ÐµÑ€, ÑƒÐ¼ÐµÐ½ÑŒÑˆÐµÐ½Ð¸Ðµ Ð·Ð´Ð¾Ñ€Ð¾Ð²ÑŒÑ
     }
 
-    // Îáðàáîò÷èê ñòîëêíîâåíèÿ ñ ïðåïÿòñòâèåì
+    // ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸Ðº ÑÑ‚Ð¾Ð»ÐºÐ½Ð¾Ð²ÐµÐ½Ð¸Ñ Ñ Ð¿Ñ€ÐµÐ¿ÑÑ‚ÑÑ‚Ð²Ð¸ÐµÐ¼
     private void StopPlayer(GameObject obstacle)
     {
         Debug.Log("player stop");
-        // Ëîãèêà äëÿ îáðàáîòêè ñòîëêíîâåíèÿ ñ ïðåïÿòñòâèåì
+        // Ð›Ð¾Ð³Ð¸ÐºÐ° Ð´Ð»Ñ Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ¸ ÑÑ‚Ð¾Ð»ÐºÐ½Ð¾Ð²ÐµÐ½Ð¸Ñ Ñ Ð¿Ñ€ÐµÐ¿ÑÑ‚ÑÑ‚Ð²Ð¸ÐµÐ¼
     }
 
-    // Îáðàáîò÷èê ñòîëêíîâåíèÿ ñ óñèëåíèåì
-    private void HealPlayer(GameObject powerUp)
+    // ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸Ðº ÑÑ‚Ð¾Ð»ÐºÐ½Ð¾Ð²ÐµÐ½Ð¸Ñ Ñ ÑƒÑÐ¸Ð»ÐµÐ½Ð¸ÐµÐ¼
+    private void HealPlayer()
     {
+        Debug.Log($"hp {hp}");
         Debug.Log("hp heal");
-        // Ëîãèêà äëÿ îáðàáîòêè óñèëåíèÿ, íàïðèìåð, óâåëè÷åíèå ñèëû èëè ñêîðîñòè
+        hp += 3;
+        // Ð›Ð¾Ð³Ð¸ÐºÐ° Ð´Ð»Ñ Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ¸ ÑƒÑÐ¸Ð»ÐµÐ½Ð¸Ñ, Ð½Ð°Ð¿Ñ€Ð¸Ð¼ÐµÑ€, ÑƒÐ²ÐµÐ»Ð¸Ñ‡ÐµÐ½Ð¸Ðµ ÑÐ¸Ð»Ñ‹ Ð¸Ð»Ð¸ ÑÐºÐ¾Ñ€Ð¾ÑÑ‚Ð¸
     }
 
-    // Îáðàáîò÷èê ñòîëêíîâåíèÿ ñ óñèëåíèåì
-    private void Die(GameObject powerUp)
+    // ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸Ðº ÑÑ‚Ð¾Ð»ÐºÐ½Ð¾Ð²ÐµÐ½Ð¸Ñ Ñ ÑƒÑÐ¸Ð»ÐµÐ½Ð¸ÐµÐ¼
+    private void Die()
     {
         Debug.Log("player die");
         _uiPanel.Lose();
-        // Ëîãèêà äëÿ îáðàáîòêè óñèëåíèÿ, íàïðèìåð, óâåëè÷åíèå ñèëû èëè ñêîðîñòè
+        // Ð›Ð¾Ð³Ð¸ÐºÐ° Ð´Ð»Ñ Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ¸ ÑƒÑÐ¸Ð»ÐµÐ½Ð¸Ñ, Ð½Ð°Ð¿Ñ€Ð¸Ð¼ÐµÑ€, ÑƒÐ²ÐµÐ»Ð¸Ñ‡ÐµÐ½Ð¸Ðµ ÑÐ¸Ð»Ñ‹ Ð¸Ð»Ð¸ ÑÐºÐ¾Ñ€Ð¾ÑÑ‚Ð¸
     }
 
     private void WinPoint(GameObject powerUp)
@@ -86,6 +104,6 @@ public class WhatCell : MonoBehaviour
     private void HandleDefaultCollision(GameObject other)
     {
         Debug.Log("Collision with undefind collider");
-        // Ëîãèêà äëÿ íåèçâåñòíûõ îáúåêòîâ
+        // Ð›Ð¾Ð³Ð¸ÐºÐ° Ð´Ð»Ñ Ð½ÐµÐ¸Ð·Ð²ÐµÑÑ‚Ð½Ñ‹Ñ… Ð¾Ð±ÑŠÐµÐºÑ‚Ð¾Ð²
     }
 }
