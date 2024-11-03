@@ -25,12 +25,12 @@ public class Unit : MonoBehaviour
 
     public void Deselect()
     {
-        glowHighlight.ToggleGlow(false);
+        //glowHighlight.ToggleGlow(false);
     }
 
     public void Select()
     {
-        glowHighlight.ToggleGlow();
+        //glowHighlight.ToggleGlow();
     }
 
     public void MoveThroughPath(List<Vector3> currentPath)

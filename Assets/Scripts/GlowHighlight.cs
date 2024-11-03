@@ -21,7 +21,7 @@ public class GlowHighlight : MonoBehaviour
     {
         PrepareMaterialDictionaries();
         //originalGlowColor = glowMaterial.HasProperty("_Color") ? glowMaterial.GetColor("_Color") : Color.red;
-        originalGlowColor = glowMaterial.GetColor("_Color");
+        //originalGlowColor = glowMaterial.GetColor("_Color");
 
     }
 

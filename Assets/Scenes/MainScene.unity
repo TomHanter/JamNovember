@@ -174,6 +174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MauntainGex
       objectReference: {fileID: 0}
+    - target: {fileID: 6718447295941191555, guid: e76bbcd4b032cbf478fb1fd428311a1e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -293,6 +297,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 4_grass
       objectReference: {fileID: 0}
+    - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -354,6 +362,10 @@ PrefabInstance:
     - target: {fileID: 6718447295941191555, guid: e76bbcd4b032cbf478fb1fd428311a1e, type: 3}
       propertyPath: m_Name
       value: MauntainGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718447295941191555, guid: e76bbcd4b032cbf478fb1fd428311a1e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -491,6 +503,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SandGex
       objectReference: {fileID: 0}
+    - target: {fileID: 8275302471746082571, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8762904729591614897, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.5
@@ -552,6 +568,10 @@ PrefabInstance:
     - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_Name
       value: StonesBorderGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8936883656790073582, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -634,6 +654,10 @@ PrefabInstance:
     - target: {fileID: 1242642054467126027, guid: b4a4ab6e4e409b440a9d439c58effb1c, type: 3}
       propertyPath: m_Name
       value: BobPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1242642054467126027, guid: b4a4ab6e4e409b440a9d439c58effb1c, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1242642054467126027, guid: b4a4ab6e4e409b440a9d439c58effb1c, type: 3}
       propertyPath: m_IsActive
@@ -722,8 +746,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1242642054467126027, guid: b4a4ab6e4e409b440a9d439c58effb1c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1423913546}
   m_SourcePrefab: {fileID: 100100000, guid: b4a4ab6e4e409b440a9d439c58effb1c, type: 3}
+--- !u!1 &188140989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1242642054467126027, guid: b4a4ab6e4e409b440a9d439c58effb1c, type: 3}
+  m_PrefabInstance: {fileID: 188140988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &235731414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -776,6 +808,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StonesGameplayGex
       objectReference: {fileID: 0}
+    - target: {fileID: 8063270339027415987, guid: 69ad84bda8f3b4c48b08dfc3a69d19f9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -797,6 +833,10 @@ PrefabInstance:
     - target: {fileID: 6084530911367135997, guid: abe9c34eef246cd4ea313db4cef93cdc, type: 3}
       propertyPath: m_Name
       value: 6_water_plants
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084530911367135997, guid: abe9c34eef246cd4ea313db4cef93cdc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6862157677739137095, guid: abe9c34eef246cd4ea313db4cef93cdc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -973,6 +1013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SandGex
       objectReference: {fileID: 0}
+    - target: {fileID: 8275302471746082571, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8762904729591614897, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2
@@ -1144,6 +1188,10 @@ PrefabInstance:
       value: LavaGex
       objectReference: {fileID: 0}
     - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
       propertyPath: m_TagString
       value: WinCell
       objectReference: {fileID: 0}
@@ -1209,6 +1257,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 8660183381586824029, guid: 022ead915d6d549429d5b7480bb6da6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1271,6 +1323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 4_grass
       objectReference: {fileID: 0}
+    - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1332,6 +1388,10 @@ PrefabInstance:
     - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
       propertyPath: m_Name
       value: LavaGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
       propertyPath: m_TagString
@@ -1398,6 +1458,10 @@ PrefabInstance:
     - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
       propertyPath: m_Name
       value: 4_grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1608,6 +1672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MauntainGex
       objectReference: {fileID: 0}
+    - target: {fileID: 6718447295941191555, guid: e76bbcd4b032cbf478fb1fd428311a1e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1669,6 +1737,10 @@ PrefabInstance:
     - target: {fileID: 5282525225652890235, guid: 67e8ea922254a1848900c8fa29e1fb6c, type: 3}
       propertyPath: m_Name
       value: stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282525225652890235, guid: 67e8ea922254a1848900c8fa29e1fb6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1732,6 +1804,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MauntainGex
       objectReference: {fileID: 0}
+    - target: {fileID: 6718447295941191555, guid: e76bbcd4b032cbf478fb1fd428311a1e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1794,6 +1870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StonesGameplayGex
       objectReference: {fileID: 0}
+    - target: {fileID: 8063270339027415987, guid: 69ad84bda8f3b4c48b08dfc3a69d19f9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1815,6 +1895,10 @@ PrefabInstance:
     - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_Name
       value: StonesBorderGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8936883656790073582, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1917,6 +2001,10 @@ PrefabInstance:
     - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
       propertyPath: m_Name
       value: LavaGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
       propertyPath: m_TagString
@@ -2057,6 +2145,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 8660183381586824029, guid: 022ead915d6d549429d5b7480bb6da6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2118,6 +2210,10 @@ PrefabInstance:
     - target: {fileID: 8660183381586824029, guid: 022ead915d6d549429d5b7480bb6da6c, type: 3}
       propertyPath: m_Name
       value: 3_trees
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660183381586824029, guid: 022ead915d6d549429d5b7480bb6da6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2181,6 +2277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone
       objectReference: {fileID: 0}
+    - target: {fileID: 5282525225652890235, guid: 67e8ea922254a1848900c8fa29e1fb6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2242,6 +2342,10 @@ PrefabInstance:
     - target: {fileID: 6718447295941191555, guid: e76bbcd4b032cbf478fb1fd428311a1e, type: 3}
       propertyPath: m_Name
       value: MauntainGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 6718447295941191555, guid: e76bbcd4b032cbf478fb1fd428311a1e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2382,6 +2486,10 @@ PrefabInstance:
     - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
       propertyPath: m_Name
       value: 4_grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2539,6 +2647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 4_grass
       objectReference: {fileID: 0}
+    - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2601,6 +2713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone
       objectReference: {fileID: 0}
+    - target: {fileID: 5282525225652890235, guid: 67e8ea922254a1848900c8fa29e1fb6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2622,6 +2738,10 @@ PrefabInstance:
     - target: {fileID: 6084530911367135997, guid: abe9c34eef246cd4ea313db4cef93cdc, type: 3}
       propertyPath: m_Name
       value: 6_water_plants
+      objectReference: {fileID: 0}
+    - target: {fileID: 6084530911367135997, guid: abe9c34eef246cd4ea313db4cef93cdc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6862157677739137095, guid: abe9c34eef246cd4ea313db4cef93cdc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2685,6 +2805,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SandGex
       objectReference: {fileID: 0}
+    - target: {fileID: 8275302471746082571, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8762904729591614897, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -2746,6 +2870,10 @@ PrefabInstance:
     - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_Name
       value: StonesBorderGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8936883656790073582, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2848,6 +2976,10 @@ PrefabInstance:
     - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
       propertyPath: m_Name
       value: LavaGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
       propertyPath: m_TagString
@@ -2992,6 +3124,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone
       objectReference: {fileID: 0}
+    - target: {fileID: 5282525225652890235, guid: 67e8ea922254a1848900c8fa29e1fb6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3054,6 +3190,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StonesGameplayGex
       objectReference: {fileID: 0}
+    - target: {fileID: 8063270339027415987, guid: 69ad84bda8f3b4c48b08dfc3a69d19f9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3115,6 +3255,10 @@ PrefabInstance:
     - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
       propertyPath: m_Name
       value: 4_grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3254,7 +3398,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897304660}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3b81bc905461524b8efae81a2b9363c, type: 3}
   m_Name: 
@@ -3312,6 +3456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 7_water_lily
       objectReference: {fileID: 0}
+    - target: {fileID: 3314136499660332143, guid: ff05fbd0f903fb04b9e430c9a0da97a6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3322,6 +3470,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2789413973095171797, guid: ff05fbd0f903fb04b9e430c9a0da97a6, type: 3}
   m_PrefabInstance: {fileID: 899196552}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &925871905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 925871907}
+  - component: {fileID: 925871906}
+  m_Layer: 0
+  m_Name: MovementSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &925871906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925871905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdedd7c226a93a544adb1e952ecdcb3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &925871907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925871905}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.993557, y: 0.0026048422, z: -0.0061945915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &932114853
 GameObject:
   m_ObjectHideFlags: 0
@@ -3400,6 +3592,85 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &951003365
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951003367}
+  - component: {fileID: 951003366}
+  m_Layer: 0
+  m_Name: SelectionSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &951003366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951003365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5411171d830c18e4e924378b04345f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 0}
+  selectionMask:
+    serializedVersion: 2
+    m_Bits: 192
+  hexGrid: {fileID: 0}
+  OnUnitSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1336711928}
+        m_TargetAssemblyTypeName: UnitManager, Assembly-CSharp
+        m_MethodName: HandleUnitSelected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  TerrainSelected:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1336711928}
+        m_TargetAssemblyTypeName: UnitManager, Assembly-CSharp
+        m_MethodName: HandleTerrainSelected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &951003367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951003365}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.993557, y: 0.0026048422, z: -0.0061945915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3519,6 +3790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2_fir
       objectReference: {fileID: 0}
+    - target: {fileID: 6195159627744433914, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6823640042632383552, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -3569,6 +3844,65 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6823640042632383552, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
   m_PrefabInstance: {fileID: 1008463050}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1018826202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1018826204}
+  - component: {fileID: 1018826203}
+  m_Layer: 0
+  m_Name: PlayerInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1018826203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018826202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9505b3094222e43a8db0e1a2210a21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointerClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 951003366}
+        m_TargetAssemblyTypeName: SelectionManager, Assembly-CSharp
+        m_MethodName: HandleClick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &1018826204
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018826202}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.993557, y: 0.0026048422, z: -0.0061945915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1049444317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3580,6 +3914,10 @@ PrefabInstance:
     - target: {fileID: 1440052095112542725, guid: 07fb963bd9f21a24a940cfe1a2d0afcc, type: 3}
       propertyPath: m_Name
       value: 5_water
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440052095112542725, guid: 07fb963bd9f21a24a940cfe1a2d0afcc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1781111447163314367, guid: 07fb963bd9f21a24a940cfe1a2d0afcc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3643,6 +3981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 6_water_plants
       objectReference: {fileID: 0}
+    - target: {fileID: 6084530911367135997, guid: abe9c34eef246cd4ea313db4cef93cdc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6862157677739137095, guid: abe9c34eef246cd4ea313db4cef93cdc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
@@ -3704,6 +4046,10 @@ PrefabInstance:
     - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_Name
       value: StonesBorderGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8936883656790073582, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3767,6 +4113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2_fir
       objectReference: {fileID: 0}
+    - target: {fileID: 6195159627744433914, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6823640042632383552, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -3828,6 +4178,10 @@ PrefabInstance:
     - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_Name
       value: StonesBorderGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8936883656790073582, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4052,6 +4406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MauntainGex
       objectReference: {fileID: 0}
+    - target: {fileID: 6718447295941191555, guid: e76bbcd4b032cbf478fb1fd428311a1e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4114,6 +4472,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 4_grass
       objectReference: {fileID: 0}
+    - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4135,6 +4497,10 @@ PrefabInstance:
     - target: {fileID: 8275302471746082571, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
       propertyPath: m_Name
       value: SandGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275302471746082571, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8762904729591614897, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4197,6 +4563,10 @@ PrefabInstance:
     - target: {fileID: 8275302471746082571, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
       propertyPath: m_Name
       value: SandGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275302471746082571, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8762904729591614897, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4300,6 +4670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 8660183381586824029, guid: 022ead915d6d549429d5b7480bb6da6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4367,6 +4741,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a41320407354146439ac58017d032f08, type: 3}
+--- !u!1 &1336711927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1336711929}
+  - component: {fileID: 1336711928}
+  m_Layer: 0
+  m_Name: UnitManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1336711928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336711927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2b7cf31c49eb94c96cd3dbbac20862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hexGrid: {fileID: 1982262220}
+  movementSystem: {fileID: 925871906}
+  selectedUnit: {fileID: 0}
+--- !u!4 &1336711929
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336711927}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.993557, y: 0.0026048422, z: -0.0061945915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1394062489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4419,6 +4840,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 4_grass
       objectReference: {fileID: 0}
+    - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4434,6 +4859,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1906448647852775857, guid: b4a4ab6e4e409b440a9d439c58effb1c, type: 3}
   m_PrefabInstance: {fileID: 188140988}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1423913546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188140989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3133110414bba74a97a9bed0ca75fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementPoints: 3
+  movementDuration: 1
+  rotationDuration: 0.3
 --- !u!1001 &1427284252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4486,6 +4926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 8660183381586824029, guid: 022ead915d6d549429d5b7480bb6da6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4507,6 +4951,10 @@ PrefabInstance:
     - target: {fileID: 6195159627744433914, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
       propertyPath: m_Name
       value: 2_fir
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195159627744433914, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6823640042632383552, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4679,6 +5127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 5_water
       objectReference: {fileID: 0}
+    - target: {fileID: 1440052095112542725, guid: 07fb963bd9f21a24a940cfe1a2d0afcc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1781111447163314367, guid: 07fb963bd9f21a24a940cfe1a2d0afcc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
@@ -4781,6 +5233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone
       objectReference: {fileID: 0}
+    - target: {fileID: 5282525225652890235, guid: 67e8ea922254a1848900c8fa29e1fb6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4859,6 +5315,10 @@ PrefabInstance:
     - target: {fileID: 8275302471746082571, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
       propertyPath: m_Name
       value: SandGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275302471746082571, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8762904729591614897, guid: 51f5ea52f2783814d89b448c90676451, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4962,6 +5422,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 8660183381586824029, guid: 022ead915d6d549429d5b7480bb6da6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5023,6 +5487,10 @@ PrefabInstance:
     - target: {fileID: 8063270339027415987, guid: 69ad84bda8f3b4c48b08dfc3a69d19f9, type: 3}
       propertyPath: m_Name
       value: StonesGameplayGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063270339027415987, guid: 69ad84bda8f3b4c48b08dfc3a69d19f9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5086,6 +5554,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 7_water_lily
       objectReference: {fileID: 0}
+    - target: {fileID: 3314136499660332143, guid: ff05fbd0f903fb04b9e430c9a0da97a6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5147,6 +5619,10 @@ PrefabInstance:
     - target: {fileID: 5282525225652890235, guid: 67e8ea922254a1848900c8fa29e1fb6c, type: 3}
       propertyPath: m_Name
       value: stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 5282525225652890235, guid: 67e8ea922254a1848900c8fa29e1fb6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5210,6 +5686,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 4_grass
       objectReference: {fileID: 0}
+    - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5271,6 +5751,10 @@ PrefabInstance:
     - target: {fileID: 8660183381586824029, guid: 022ead915d6d549429d5b7480bb6da6c, type: 3}
       propertyPath: m_Name
       value: 3_trees
+      objectReference: {fileID: 0}
+    - target: {fileID: 8660183381586824029, guid: 022ead915d6d549429d5b7480bb6da6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5368,6 +5852,10 @@ PrefabInstance:
     - target: {fileID: 1440052095112542725, guid: 07fb963bd9f21a24a940cfe1a2d0afcc, type: 3}
       propertyPath: m_Name
       value: 5_water
+      objectReference: {fileID: 0}
+    - target: {fileID: 1440052095112542725, guid: 07fb963bd9f21a24a940cfe1a2d0afcc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1781111447163314367, guid: 07fb963bd9f21a24a940cfe1a2d0afcc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5606,6 +6094,10 @@ PrefabInstance:
       value: LavaGex
       objectReference: {fileID: 0}
     - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
       propertyPath: m_TagString
       value: WinCell
       objectReference: {fileID: 0}
@@ -5671,6 +6163,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stone
       objectReference: {fileID: 0}
+    - target: {fileID: 5282525225652890235, guid: 67e8ea922254a1848900c8fa29e1fb6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5732,6 +6228,10 @@ PrefabInstance:
     - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
       propertyPath: m_Name
       value: LavaGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7765958384056526919, guid: 4c1303e326f5b1b4390c2bed58dc78cb, type: 3}
       propertyPath: m_TagString
@@ -5804,6 +6304,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 7_water_lily
       objectReference: {fileID: 0}
+    - target: {fileID: 3314136499660332143, guid: ff05fbd0f903fb04b9e430c9a0da97a6, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5865,6 +6369,10 @@ PrefabInstance:
     - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
       propertyPath: m_Name
       value: 4_grass
+      objectReference: {fileID: 0}
+    - target: {fileID: 4455866681668622880, guid: 3221c4745b358eb44b1a2d10e70769b0, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6003,6 +6511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3_trees
       objectReference: {fileID: 0}
+    - target: {fileID: 8660183381586824029, guid: 022ead915d6d549429d5b7480bb6da6c, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6013,6 +6525,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8315041611860480487, guid: 022ead915d6d549429d5b7480bb6da6c, type: 3}
   m_PrefabInstance: {fileID: 1977711976}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1982262219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1982262221}
+  - component: {fileID: 1982262220}
+  m_Layer: 0
+  m_Name: HexGrid
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1982262220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982262219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3266a6051716c7b41916b3011b488ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1982262221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982262219}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.993557, y: 0.0026048422, z: -0.0061945915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1995271796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6024,6 +6580,10 @@ PrefabInstance:
     - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_Name
       value: StonesBorderGex
+      objectReference: {fileID: 0}
+    - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8936883656790073582, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6087,6 +6647,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StonesBorderGex
       objectReference: {fileID: 0}
+    - target: {fileID: 8596774630403291732, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8936883656790073582, guid: ab918f69df82b5c4ab614f87f040617f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4
@@ -6149,6 +6713,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2_fir
       objectReference: {fileID: 0}
+    - target: {fileID: 6195159627744433914, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 6823640042632383552, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.5
@@ -6210,6 +6778,10 @@ PrefabInstance:
     - target: {fileID: 6195159627744433914, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
       propertyPath: m_Name
       value: 2_fir
+      objectReference: {fileID: 0}
+    - target: {fileID: 6195159627744433914, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6823640042632383552, guid: 16451cc14c602ae4f961d974bb8925ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6712,3 +7284,8 @@ SceneRoots:
   - {fileID: 70722404}
   - {fileID: 1497335702}
   - {fileID: 98133889}
+  - {fileID: 1982262221}
+  - {fileID: 1018826204}
+  - {fileID: 951003367}
+  - {fileID: 1336711929}
+  - {fileID: 925871907}

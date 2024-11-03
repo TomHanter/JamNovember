@@ -53,6 +53,10 @@ PrefabInstance:
       value: 4_grass
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 36e6429900ca24c41832bca1bfae3d92, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 36e6429900ca24c41832bca1bfae3d92, type: 3}
       propertyPath: m_TagString
       value: GrassCell
       objectReference: {fileID: 0}
@@ -66,6 +70,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36e6429900ca24c41832bca1bfae3d92, type: 3}
       insertIndex: -1
       addedObject: {fileID: 499314165503944205}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36e6429900ca24c41832bca1bfae3d92, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3682089666099845928}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 36e6429900ca24c41832bca1bfae3d92, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6736369758849406498}
   m_SourcePrefab: {fileID: 100100000, guid: 36e6429900ca24c41832bca1bfae3d92, type: 3}
 --- !u!1 &4455866681668622880 stripped
 GameObject:
@@ -120,3 +130,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.8, y: 0.20213151, z: 0.9}
   m_Center: {x: -0.0064432323, y: 0.0026048422, z: -0.0061945915}
+--- !u!114 &-3682089666099845928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4455866681668622880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ec917f6803e22740abc849c867e7865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlight: {fileID: 0}
+  hexType: 1
+--- !u!114 &-6736369758849406498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4455866681668622880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ffbc5c891b0114489f173618978e1c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetCoordinates: {x: 0, y: 0, z: 0}

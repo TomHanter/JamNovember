@@ -18,7 +18,7 @@ public class Hex : MonoBehaviour
     public int GetCost()
         => hexType switch
         {
-            HexType.Difficult => 1,
+            HexType.Difficult => 100,
             HexType.Default => 1,
             HexType.Road => 1,
             _ => throw new Exception($"Hex of type {hexType} not supported")
@@ -36,22 +36,22 @@ public class Hex : MonoBehaviour
     }
     public void EnableHighlight()
     {
-        highlight.ToggleGlow(true);
+        //highlight.ToggleGlow(true);
     }
 
     public void DisableHighlight()
     {
-        highlight.ToggleGlow(false);
+        //highlight.ToggleGlow(false);
     }
 
     internal void ResetHighlight()
     {
-        highlight.ResetGlowHighlight();
+        //highlight.ResetGlowHighlight();
     }
 
     internal void HighlightPath()
     {
-        highlight.HighlightValidPath();
+        //highlight.HighlightValidPath();
     }
 }
 
