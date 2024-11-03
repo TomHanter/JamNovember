@@ -28,15 +28,11 @@ public class WhatCell : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "LavaCell"://хп жизни?
-                HealPlayer(collision.gameObject);
+                HealPlayer();
                 break;
 
             case "WaterCell":// смерть
                 Die();
-                break;
-
-            case "LavaCell":
-                HealPlayer();
                 break;
 
             case "FireCell":// изменяемый блок?
@@ -44,7 +40,7 @@ public class WhatCell : MonoBehaviour
                 break;
 
             case "GrassCell":// нейтральный блок меняется на лава блок + получения урона
-                TakeDamage(collision.gameObject);
+                TakeDamage();
                 _changeMesh.ChangerMeshGex();
                 break;
 
