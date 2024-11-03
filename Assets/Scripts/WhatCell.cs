@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,6 +8,7 @@ public class WhatCell : MonoBehaviour
 {
     private UIPanel _uiPanel;
     private HexogenChange _changeMesh;
+    [SerializeField] private TMP_Text _textHp;
     private int hp = 3;
 
     private void Awake()
@@ -19,8 +21,15 @@ public class WhatCell : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        _textHp.text = hp.ToString();
+    }
+
     void Update()
     {
+       
+
         if (hp <= 0)
         {
             Die();
@@ -66,6 +75,7 @@ public class WhatCell : MonoBehaviour
         Debug.Log("damage received");
         hp--;
         Debug.Log($"hp {hp}");
+        _textHp.text = hp.ToString();
         // Здесь можно добавить логику для врага, например, уменьшение здоровья
     }
 
