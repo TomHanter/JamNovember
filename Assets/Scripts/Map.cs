@@ -99,7 +99,11 @@ public class TilemapManager : MonoBehaviour
 
     void Start()
     {
-        GetAllTiles();
+        void Start()
+        {
+            //tilemap.CompressBounds(); // Recalculates the bounds
+            GetAllTiles();
+        }
     }
 
     void GetAllTiles()

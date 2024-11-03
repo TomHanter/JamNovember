@@ -12,6 +12,11 @@ public class WhatCell : MonoBehaviour
     private void Awake()
     {
         _uiPanel = Camera.main.GetComponent<UIPanel>();
+        _changeMesh = GetComponent<HexogenChange>();
+        if (_changeMesh == null)
+        {
+            Debug.LogWarning("HexogenChange component not found on this object. Make sure to assign it.");
+        }
     }
 
     void Update()
@@ -28,6 +33,7 @@ public class WhatCell : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "LavaCell"://хп жизни?
+                collision.gameObject.tag = "FireCell";
                 HealPlayer();
                 break;
 
@@ -35,17 +41,13 @@ public class WhatCell : MonoBehaviour
                 Die();
                 break;
 
-            case "FireCell":// изменяемый блок?
-                //HealPlayer(collision.gameObject);
+            case "FireCell":// изменяемый блок
                 break;
 
             case "GrassCell":// нейтральный блок меняется на лава блок + получения урона
                 TakeDamage();
-                _changeMesh.ChangerMeshGex();
-                break;
-
-            case "BorderCell"://????
-                StopPlayer(collision.gameObject);
+                Debug.Log($"gameObject = {collision.gameObject}");
+                _changeMesh.ReplaceObjectAtPosition(collision.gameObject);
                 break;
 
             case "WinCell":
@@ -61,9 +63,9 @@ public class WhatCell : MonoBehaviour
     // Обработчик столкновения с врагом
     private void TakeDamage()
     {
-        Debug.Log($"hp {hp}");
         Debug.Log("damage received");
         hp--;
+        Debug.Log($"hp {hp}");
         // Здесь можно добавить логику для врага, например, уменьшение здоровья
     }
 
@@ -77,9 +79,9 @@ public class WhatCell : MonoBehaviour
     // Обработчик столкновения с усилением
     private void HealPlayer()
     {
-        Debug.Log($"hp {hp}");
         Debug.Log("hp heal");
         hp += 3;
+        Debug.Log($"hp {hp}");
         // Логика для обработки усиления, например, увеличение силы или скорости
     }
 

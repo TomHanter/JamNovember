@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class HexogenChange : MonoBehaviour
 {
-    [SerializeField] private MeshFilter _modelToChangeGrass;//grass
-    [SerializeField] private Mesh _modelToUseChangeFire;//lava or fire
+    [SerializeField] private GameObject _newObject; // Новый объект для замены
 
-
-    public void ChangerMeshGex()
+    public void ReplaceObjectAtPosition(GameObject targetObject)
     {
-        _modelToChangeGrass.mesh = _modelToUseChangeFire;
-        gameObject.tag = "FireCell";
+        if (targetObject != null && _newObject != null)
+        {
+            // Сохраняем позицию и поворот целевого объекта
+            Vector3 position = targetObject.transform.position;
+            Quaternion rotation = targetObject.transform.rotation;
+
+            // Удаляем целевой объект
+            Destroy(targetObject);
+
+            // Создаем новый объект на месте удаленного
+            Instantiate(_newObject, position, rotation);
+
+            Debug.Log("Object replaced with new object at the same position.");
+        }
+        else
+        {
+            Debug.LogWarning("Target object or new object reference is missing.");
+        }
     }
 }

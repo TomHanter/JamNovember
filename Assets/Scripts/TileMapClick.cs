@@ -24,13 +24,12 @@ public class TileMapClick : MonoBehaviour
                 var rb = gameObject.GetComponent<Rigidbody>();
 
                 Collider collider = rb.GetComponent<Collider>();
-                if (rb != null)
+                if (rb != null && gameObject.tag != "BorderCell")
                 {
                     Vector3 center = collider.bounds.center;
                     center.y += 0.3f;
                     _player.transform.position = center;
                     OnPlayerMoved?.Invoke(center);
-
                 }
             }
         }
