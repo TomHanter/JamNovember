@@ -123,6 +123,7 @@ public class WhatCell : MonoBehaviour
 
     private void WinPoint(GameObject powerUp)
     {
+        this.gameObject.SetActive(false);
         Debug.Log("player win");
         _uiPanel.Win();
     }

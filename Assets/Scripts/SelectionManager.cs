@@ -8,6 +8,7 @@ using UnityEngine.Events;
 public class SelectionManager : MonoBehaviour
 {
     [SerializeField] private Camera _mainCamera;
+    [SerializeField] private GameObject _unit;
 
     public LayerMask SelectionMask;
     public HexGrid HexGrid;
@@ -28,17 +29,19 @@ public class SelectionManager : MonoBehaviour
         GameObject result;
         if (FindTarget(mousePosition, out result))
         {
-            if (UnitSelected(result))
-            {
-                Debug.Log("unit");
-                OnUnitSelected?.Invoke(result);
-            }
-            else
-            {
-                TerrainSelected?.Invoke(result);
-                //_animator.SetBool("isWalk", true);
-                Debug.Log("tile");
-            }
+            OnUnitSelected?.Invoke(_unit);
+
+            TerrainSelected?.Invoke(result);
+            //_animator.SetBool("isWalk", true);
+            Debug.Log("tile");
+            //if (UnitSelected(result))
+            //{
+            //    Debug.Log("unit");
+            //    OnUnitSelected?.Invoke(result);
+            //}
+            //else
+            //{
+            //}
             HexGrid.FindAllHex();
         }
     }

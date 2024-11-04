@@ -7,19 +7,20 @@ public class UnitManager : MonoBehaviour
     [SerializeField] private HexGrid _hexGrid;
     [SerializeField] private MovementSystem _movementSystem;
     [SerializeField] private Unit _selectedUnit;
+    
     private Hex _previouslySelectedHex;
 
     public bool PlayersTurn { get; private set; } = true;
 
     public void HandleUnitSelected(GameObject unit)
     {
-        if (PlayersTurn == false)
-            return;
+        //if (PlayersTurn == false)
+        //    return;
 
         Unit unitReference = unit.GetComponent<Unit>();
 
-        if (CheckIfTheSameUnitSelected(unitReference))
-            return;
+        //if (CheckIfTheSameUnitSelected(unitReference))
+        //    return;
 
         PrepareUnitForMovement(unitReference);
     }
@@ -36,13 +37,13 @@ public class UnitManager : MonoBehaviour
 
     public void HandleTerrainSelected(GameObject hexGO)
     {
-        if (_selectedUnit == null || PlayersTurn == false)
-        {
+        if (_selectedUnit == null || hexGO == _selectedUnit.gameObject)
+        {                                                           
             return;
         }
 
         Hex selectedHex = hexGO.GetComponent<Hex>();
-
+        //PrepareUnitForMovement(_selectedUnit);
         if (HandleHexOutOfRange(selectedHex.HexCoords) || HandleSelectedHexIsUnitHex(selectedHex.HexCoords))
             return;
         HandleTargetHexSelected(selectedHex);
@@ -50,10 +51,10 @@ public class UnitManager : MonoBehaviour
 
     private void PrepareUnitForMovement(Unit unitReference)
     {
-        if (this._selectedUnit != null)
-        {
-            ClearOldSelection();
-        }
+        //if (this._selectedUnit != null)
+        //{
+        //    ClearOldSelection();
+        //}
 
         this._selectedUnit = unitReference;
         this._selectedUnit.Select();
@@ -63,9 +64,9 @@ public class UnitManager : MonoBehaviour
     private void ClearOldSelection()
     {
         _previouslySelectedHex = null;
-        this._selectedUnit.Deselect();
+        //this._selectedUnit.Deselect();
         _movementSystem.HideRange(this._hexGrid);
-        this._selectedUnit = null;
+        //this._selectedUnit = null;
 
     }
 
