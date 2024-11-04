@@ -4,10 +4,12 @@ using TMPro;
 using System.Data;
 using UnityEngine;
 using UnityEngine.UIElements;
+using System.Net;
 
 public class WhatCell : MonoBehaviour
 {
     [SerializeField] private TMP_Text _textHp;
+    [SerializeField] private TMP_Text _endPoints;
     [SerializeField] private int _HpPlus = 5;
     [SerializeField] private int _hp = 3;
     private UIPanel _uiPanel;
@@ -125,6 +127,8 @@ public class WhatCell : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         Debug.Log("player win");
+        _endPoints.text = _textHp.text;
+        _textHp.enabled = false;
         _uiPanel.Win();
     }
 

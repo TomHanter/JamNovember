@@ -30,6 +30,22 @@ public class UIPanel : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            OnButtonCloseGame();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            OnButtonResetScene();
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            OnButtonOffSound();
+        }
+    }
+
     public void Win()
     {
         _panelWin.SetActive(true);
