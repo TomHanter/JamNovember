@@ -7,8 +7,7 @@ using UnityEngine.Events;
 
 public class SelectionManager : MonoBehaviour
 {
-    [SerializeField]
-    private Camera _mainCamera;
+    [SerializeField] private Camera _mainCamera;
 
     public LayerMask SelectionMask;
     public HexGrid HexGrid;
@@ -37,14 +36,17 @@ public class SelectionManager : MonoBehaviour
             else
             {
                 TerrainSelected?.Invoke(result);
+                //_animator.SetBool("isWalk", true);
                 Debug.Log("tile");
             }
+            HexGrid.FindAllHex();
         }
     }
 
     private bool UnitSelected(GameObject result)
     {
         return result.GetComponent<Unit>() != null;
+
     }
 
     private bool FindTarget(Vector3 mousePosition, out GameObject result)

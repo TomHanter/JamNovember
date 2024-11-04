@@ -82,7 +82,6 @@ public class UnitManager : MonoBehaviour
             PlayersTurn = false;
             _selectedUnit.MovementFinished += ResetTurn;
             ClearOldSelection();
-
         }
     }
 

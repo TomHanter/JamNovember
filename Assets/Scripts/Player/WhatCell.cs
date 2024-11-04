@@ -9,9 +9,9 @@ public class WhatCell : MonoBehaviour
 {
     [SerializeField] private TMP_Text _textHp;
     [SerializeField] private int _HpPlus = 5;
+    [SerializeField] private int _hp = 3;
     private UIPanel _uiPanel;
     private HexogenChange _changeMesh;
-    private int _hp = 3;
 
     private void Awake()
     {
@@ -40,7 +40,7 @@ public class WhatCell : MonoBehaviour
         switch (collider.gameObject.tag)
         {
             case "WaterCell":// смерть
-                Die();
+                Die(collider.gameObject);
                 break;
         }
     }
@@ -70,7 +70,7 @@ public class WhatCell : MonoBehaviour
 
             case "LavaPlusHp":
                 Destroy(collision.gameObject);
-                    break;
+                break;
 
             default:
                 HandleDefaultCollision(collision.gameObject);
@@ -106,10 +106,18 @@ public class WhatCell : MonoBehaviour
     }
 
     // Обработчик столкновения с усилением
-    private void Die()
+    private void Die(GameObject obj = null)
     {
         Debug.Log("player die");
-        _uiPanel.Lose();
+        if (obj != null)
+        {
+            _uiPanel.Lose();
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+            _uiPanel.Lose();
+        }
         // Логика для обработки усиления, например, увеличение силы или скорости
     }
 

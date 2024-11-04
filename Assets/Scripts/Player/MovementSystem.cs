@@ -58,7 +58,6 @@ public class MovementSystem : MonoBehaviour
     {
         Debug.Log("Moving unit " + selectedUnit.name);
         selectedUnit.MoveThroughPath(_currentPath.Select(pos => hexGrid.GetTileAt(pos).transform.position).ToList());
-
     }
 
     public bool IsHexInRange(Vector3Int hexPosition)
