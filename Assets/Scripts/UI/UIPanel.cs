@@ -26,7 +26,7 @@ public class UIPanel : MonoBehaviour
         else if (_soundIsOn)
         {
             _soundIcon.SetActive(true);
-            AudioListener.volume = 1.0f;
+            AudioListener.volume = 0.6f;
         }
     }
 
@@ -71,7 +71,7 @@ public class UIPanel : MonoBehaviour
         if (!_soundIsOn)
         {
             _soundIcon.SetActive(true);
-            AudioListener.volume = 1.0f;
+            AudioListener.volume = 0.6f;
             _soundIsOn = true;
         }
         else if (_soundIsOn)
