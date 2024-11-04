@@ -6,52 +6,50 @@ using UnityEngine;
 [SelectionBase]
 public class Hex : MonoBehaviour
 {
-    [SerializeField]
-    private GlowHighlight highlight;
-    private HexCoordinates hexCoordinates;
+    [SerializeField] private GlowHighlight _highlight;
+    private HexCoordinates _hexCoordinates;
 
-    [SerializeField]
-    private HexType hexType;
+    [SerializeField] private HexType _hexType;
 
-    public Vector3Int HexCoords => hexCoordinates.GetHexCoords();
+    public Vector3Int HexCoords => _hexCoordinates.GetHexCoords();
 
     public int GetCost()
-        => hexType switch
+        => _hexType switch
         {
             HexType.Difficult => 100,
             HexType.Default => 1,
             HexType.Road => 1,
-            _ => throw new Exception($"Hex of type {hexType} not supported")
+            _ => throw new Exception($"Hex of type {_hexType} not supported")
         };
 
     public bool IsObstacle()
     {
-        return this.hexType == HexType.Obstacle;
+        return this._hexType == HexType.Obstacle;
     }
 
     private void Awake()
     {
-        hexCoordinates = GetComponent<HexCoordinates>();
-        highlight = GetComponent<GlowHighlight>();
+        _hexCoordinates = GetComponent<HexCoordinates>();
+        _highlight = GetComponent<GlowHighlight>();
     }
     public void EnableHighlight()
     {
-        //highlight.ToggleGlow(true);
+        //_highlight.ToggleGlow(true);
     }
 
     public void DisableHighlight()
     {
-        //highlight.ToggleGlow(false);
+        //_highlight.ToggleGlow(false);
     }
 
     internal void ResetHighlight()
     {
-        //highlight.ResetGlowHighlight();
+        //_highlight.ResetGlowHighlight();
     }
 
     internal void HighlightPath()
     {
-        //highlight.HighlightValidPath();
+        //_highlight.HighlightValidPath();
     }
 }
 

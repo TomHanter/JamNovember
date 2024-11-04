@@ -46,7 +46,7 @@ public class GraphSearch
         }
         return new BFSResult { visitedNodesDict = visitedNodes };
     }
-    
+
 
     public static List<Vector3Int> GeneratePathBFS(Vector3Int current, Dictionary<Vector3Int, Vector3Int?> visitedNodesDict)
     {

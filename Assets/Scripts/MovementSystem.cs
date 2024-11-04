@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class MovementSystem : MonoBehaviour
 {
-    private BFSResult movementRange = new BFSResult();
-    private List<Vector3Int> currentPath = new List<Vector3Int>();
+    private BFSResult _movementRange = new BFSResult();
+    private List<Vector3Int> _currentPath = new List<Vector3Int>();
 
     public void HideRange(HexGrid hexGrid)
     {
-        foreach (Vector3Int hexPosition in movementRange.GetRangePositions())
+        foreach (Vector3Int hexPosition in _movementRange.GetRangePositions())
         {
             hexGrid.GetTileAt(hexPosition).DisableHighlight();
         }
-        movementRange = new BFSResult();
+        _movementRange = new BFSResult();
     }
 
     public void ShowRange(Unit selectedUnit, HexGrid hexGrid)
@@ -23,7 +23,7 @@ public class MovementSystem : MonoBehaviour
 
         Vector3Int unitPos = hexGrid.GetClosestHex(selectedUnit.transform.position);
 
-        foreach (Vector3Int hexPosition in movementRange.GetRangePositions())
+        foreach (Vector3Int hexPosition in _movementRange.GetRangePositions())
         {
             if (unitPos == hexPosition)
                 continue;
@@ -34,20 +34,20 @@ public class MovementSystem : MonoBehaviour
 
     public void CalcualteRange(Unit selectedUnit, HexGrid hexGrid)
     {
-        movementRange = GraphSearch.BFSGetRange(hexGrid, hexGrid.GetClosestHex(selectedUnit.transform.position), selectedUnit.MovementPoints);
+        _movementRange = GraphSearch.BFSGetRange(hexGrid, hexGrid.GetClosestHex(selectedUnit.transform.position), selectedUnit.MovementPoints);
     }
 
 
     public void ShowPath(Vector3Int selectedHexPosition, HexGrid hexGrid)
     {
-        if (movementRange.GetRangePositions().Contains(selectedHexPosition))
+        if (_movementRange.GetRangePositions().Contains(selectedHexPosition))
         {
-            foreach (Vector3Int hexPosition in currentPath)
+            foreach (Vector3Int hexPosition in _currentPath)
             {
                 hexGrid.GetTileAt(hexPosition).ResetHighlight();
             }
-            currentPath = movementRange.GetPathTo(selectedHexPosition);
-            foreach (Vector3Int hexPosition in currentPath)
+            _currentPath = _movementRange.GetPathTo(selectedHexPosition);
+            foreach (Vector3Int hexPosition in _currentPath)
             {
                 hexGrid.GetTileAt(hexPosition).HighlightPath();
             }
@@ -57,12 +57,12 @@ public class MovementSystem : MonoBehaviour
     public void MoveUnit(Unit selectedUnit, HexGrid hexGrid)
     {
         Debug.Log("Moving unit " + selectedUnit.name);
-        selectedUnit.MoveThroughPath(currentPath.Select(pos => hexGrid.GetTileAt(pos).transform.position).ToList());
+        selectedUnit.MoveThroughPath(_currentPath.Select(pos => hexGrid.GetTileAt(pos).transform.position).ToList());
 
     }
 
     public bool IsHexInRange(Vector3Int hexPosition)
     {
-        return movementRange.IsHexPositionInRange(hexPosition);
+        return _movementRange.IsHexPositionInRange(hexPosition);
     }
 }

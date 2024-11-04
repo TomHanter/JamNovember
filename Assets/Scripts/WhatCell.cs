@@ -11,7 +11,7 @@ public class WhatCell : MonoBehaviour
     [SerializeField] private int _HpPlus = 5;
     private UIPanel _uiPanel;
     private HexogenChange _changeMesh;
-    private int hp = 3;
+    private int _hp = 3;
 
     private void Awake()
     {
@@ -24,14 +24,24 @@ public class WhatCell : MonoBehaviour
     }
     private void Start()
     {
-        _textHp.text = hp.ToString();
+        _textHp.text = _hp.ToString();
     }
 
     void Update()
     {
-        if (hp <= 0)
+        if (_hp <= 0)
         {
             Die();
+        }
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        switch (collider.gameObject.tag)
+        {
+            case "WaterCell":// смерть
+                Die();
+                break;
         }
     }
 
@@ -40,13 +50,9 @@ public class WhatCell : MonoBehaviour
         //Debug.Log("collision");
         switch (collision.gameObject.tag)
         {
-            case "LavaCell"://хп жизни?
+            case "LavaCell"://хп жизни
                 collision.gameObject.tag = "FireCell";
                 HealPlayer();
-                break;
-
-            case "WaterCell":// смерть
-                Die();
                 break;
 
             case "FireCell":// изменяемый блок
@@ -76,9 +82,9 @@ public class WhatCell : MonoBehaviour
     private void TakeDamage()
     {
         Debug.Log("damage received");
-        hp--;
-        Debug.Log($"hp {hp}");
-        _textHp.text = hp.ToString();
+        _hp--;
+        Debug.Log($"hp {_hp}");
+        _textHp.text = _hp.ToString();
         // Здесь можно добавить логику для врага, например, уменьшение здоровья
     }
 
@@ -93,9 +99,9 @@ public class WhatCell : MonoBehaviour
     private void HealPlayer()
     {
         Debug.Log("hp heal");
-        hp += _HpPlus;
-        _textHp.text = hp.ToString();
-        Debug.Log($"hp {hp}");
+        _hp += _HpPlus;
+        _textHp.text = _hp.ToString();
+        Debug.Log($"hp {_hp}");
         // Логика для обработки усиления, например, увеличение силы или скорости
     }
 

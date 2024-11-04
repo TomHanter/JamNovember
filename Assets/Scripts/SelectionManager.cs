@@ -8,10 +8,10 @@ using static UnityEditor.Experimental.GraphView.GraphView;
 public class SelectionManager : MonoBehaviour
 {
     [SerializeField]
-    private Camera mainCamera;
+    private Camera _mainCamera;
 
-    public LayerMask selectionMask;
-    public HexGrid hexGrid;
+    public LayerMask SelectionMask;
+    public HexGrid HexGrid;
 
     public UnityEvent<GameObject> OnUnitSelected;
     public UnityEvent<GameObject> TerrainSelected;
@@ -20,8 +20,8 @@ public class SelectionManager : MonoBehaviour
 
     private void Awake()
     {
-        if (mainCamera == null)
-            mainCamera = Camera.main;
+        if (_mainCamera == null)
+            _mainCamera = Camera.main;
     }
 
     public void HandleClick(Vector3 mousePosition)
@@ -50,8 +50,8 @@ public class SelectionManager : MonoBehaviour
     private bool FindTarget(Vector3 mousePosition, out GameObject result)
     {
         RaycastHit hit;
-        Ray ray = mainCamera.ScreenPointToRay(mousePosition);
-        if (Physics.Raycast(ray, out hit, 100, selectionMask))
+        Ray ray = _mainCamera.ScreenPointToRay(mousePosition);
+        if (Physics.Raycast(ray, out hit, 100, SelectionMask))
         {
             result = hit.collider.gameObject;
             return true;

@@ -10,18 +10,18 @@ public class GlowHighlight : MonoBehaviour
 
     Dictionary<Color, Material> cachedGlowMaterials = new Dictionary<Color, Material>();
 
-    public Material glowMaterial;
+    private Material _glowMaterial;
 
-    private bool isGlowing = false;
+    private bool _isGlowing = false;
 
-    private Color validSpaceColor = Color.green;
-    private Color originalGlowColor;
+    private Color _validSpaceColor = Color.green;
+    private Color _originalGlowColor;
 
     private void Awake()
     {
         PrepareMaterialDictionaries();
-        //originalGlowColor = glowMaterial.HasProperty("_Color") ? glowMaterial.GetColor("_Color") : Color.red;
-        //originalGlowColor = glowMaterial.GetColor("_Color");
+        //_originalGlowColor = _glowMaterial.HasProperty("_Color") ? _glowMaterial.GetColor("_Color") : Color.red;
+        //_originalGlowColor = _glowMaterial.GetColor("_Color");
 
     }
 
@@ -39,7 +39,7 @@ public class GlowHighlight : MonoBehaviour
                 Material mat = null;
                 if (cachedGlowMaterials.TryGetValue(originalMaterials[i].color, out mat) == false)
                 {
-                    mat = new Material(glowMaterial);
+                    mat = new Material(_glowMaterial);
                     //By default, Unity considers a color with the property name name "_Color" to be the main color
                     mat.color = originalMaterials[i].color;
                     cachedGlowMaterials[mat.color] = mat;
@@ -52,13 +52,13 @@ public class GlowHighlight : MonoBehaviour
 
     internal void HighlightValidPath()
     {
-        if (isGlowing == false)
+        if (_isGlowing == false)
             return;
         foreach (Renderer renderer in glowMaterialDictionary.Keys)
         {
             foreach (Material item in glowMaterialDictionary[renderer])
             {
-                item.SetColor("_GlowColor", validSpaceColor);
+                item.SetColor("_GlowColor", _validSpaceColor);
             }
         }
     }
@@ -69,21 +69,20 @@ public class GlowHighlight : MonoBehaviour
         {
             foreach (Material item in glowMaterialDictionary[renderer])
             {
-                item.SetColor("_GlowColor", originalGlowColor);
+                item.SetColor("_GlowColor", _originalGlowColor);
             }
         }
     }
 
     public void ToggleGlow()
     {
-        if (isGlowing == false)
+        if (_isGlowing == false)
         {
             ResetGlowHighlight();
             foreach (Renderer renderer in originalMaterialDictionary.Keys)
             {
                 renderer.materials = glowMaterialDictionary[renderer];
             }
-
         }
         else
         {
@@ -92,14 +91,14 @@ public class GlowHighlight : MonoBehaviour
                 renderer.materials = originalMaterialDictionary[renderer];
             }
         }
-        isGlowing = !isGlowing;
+        _isGlowing = !_isGlowing;
     }
 
     public void ToggleGlow(bool state)
     {
-        if (isGlowing == state)
+        if (_isGlowing == state)
             return;
-        isGlowing = !state;
+        _isGlowing = !state;
         ToggleGlow();
     }
 }
