@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class HexogenChange : MonoBehaviour
 {
-    [SerializeField] private GameObject _newObject; // Новый объект для замены
+    [SerializeField] private GameObject _newObject; 
+    [SerializeField] private HexGrid hexGrid;
 
     public void ReplaceObjectAtPosition(GameObject targetObject)
     {
@@ -19,6 +20,7 @@ public class HexogenChange : MonoBehaviour
 
             // Создаем новый объект на месте удаленного
             Instantiate(_newObject, position, rotation);
+            hexGrid.FindAllHex();
 
             Debug.Log("Object replaced with new object at the same position.");
         }

@@ -10,10 +10,15 @@ public class HexGrid : MonoBehaviour
 
     private void Start()
     {
+        FindAllHex();
+    }
+
+    public void FindAllHex()
+    {
         foreach (Hex hex in FindObjectsOfType<Hex>())
         {
             hexTileDict[hex.HexCoords] = hex;
-        }            
+        }
     }
 
     public Hex GetTileAt(Vector3Int hexCoordinates)

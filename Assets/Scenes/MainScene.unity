@@ -900,6 +900,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7236226167328336022, guid: b4a4ab6e4e409b440a9d439c58effb1c, type: 3}
+      propertyPath: hexGrid
+      value: 
+      objectReference: {fileID: 1982262220}
+    - target: {fileID: -7236226167328336022, guid: b4a4ab6e4e409b440a9d439c58effb1c, type: 3}
       propertyPath: _newObject
       value: 
       objectReference: {fileID: 7765958384056526919, guid: 70d392d33a729c74aaae9576f4780354, type: 3}
