@@ -4,17 +4,12 @@ using UnityEngine;
 
 public class UnitManager : MonoBehaviour
 {
-    [SerializeField]
-    private HexGrid hexGrid;
-
-    [SerializeField]
-    private MovementSystem movementSystem;
+    [SerializeField] private HexGrid _hexGrid;
+    [SerializeField] private MovementSystem _movementSystem;
+    [SerializeField] private Unit _selectedUnit;
+    private Hex _previouslySelectedHex;
 
     public bool PlayersTurn { get; private set; } = true;
-
-    [SerializeField]
-    private Unit selectedUnit;
-    private Hex previouslySelectedHex;
 
     public void HandleUnitSelected(GameObject unit)
     {
@@ -31,7 +26,7 @@ public class UnitManager : MonoBehaviour
 
     private bool CheckIfTheSameUnitSelected(Unit unitReference)
     {
-        if (this.selectedUnit == unitReference)
+        if (this._selectedUnit == unitReference)
         {
             ClearOldSelection();
             return true;
@@ -41,7 +36,7 @@ public class UnitManager : MonoBehaviour
 
     public void HandleTerrainSelected(GameObject hexGO)
     {
-        if (selectedUnit == null || PlayersTurn == false)
+        if (_selectedUnit == null || PlayersTurn == false)
         {
             return;
         }
@@ -50,44 +45,42 @@ public class UnitManager : MonoBehaviour
 
         if (HandleHexOutOfRange(selectedHex.HexCoords) || HandleSelectedHexIsUnitHex(selectedHex.HexCoords))
             return;
-
         HandleTargetHexSelected(selectedHex);
-
     }
 
     private void PrepareUnitForMovement(Unit unitReference)
     {
-        if (this.selectedUnit != null)
+        if (this._selectedUnit != null)
         {
             ClearOldSelection();
         }
 
-        this.selectedUnit = unitReference;
-        this.selectedUnit.Select();
-        movementSystem.ShowRange(this.selectedUnit, this.hexGrid);
+        this._selectedUnit = unitReference;
+        this._selectedUnit.Select();
+        _movementSystem.ShowRange(this._selectedUnit, this._hexGrid);
     }
 
     private void ClearOldSelection()
     {
-        previouslySelectedHex = null;
-        this.selectedUnit.Deselect();
-        movementSystem.HideRange(this.hexGrid);
-        this.selectedUnit = null;
+        _previouslySelectedHex = null;
+        this._selectedUnit.Deselect();
+        _movementSystem.HideRange(this._hexGrid);
+        this._selectedUnit = null;
 
     }
 
     private void HandleTargetHexSelected(Hex selectedHex)
     {
-        if (previouslySelectedHex == null || previouslySelectedHex != selectedHex)
+        if (_previouslySelectedHex == null || _previouslySelectedHex != selectedHex)
         {
-            previouslySelectedHex = selectedHex;
-            movementSystem.ShowPath(selectedHex.HexCoords, this.hexGrid);
+            _previouslySelectedHex = selectedHex;
+            _movementSystem.ShowPath(selectedHex.HexCoords, this._hexGrid);
         }
         else
         {
-            movementSystem.MoveUnit(selectedUnit, this.hexGrid);
+            _movementSystem.MoveUnit(_selectedUnit, this._hexGrid);
             PlayersTurn = false;
-            selectedUnit.MovementFinished += ResetTurn;
+            _selectedUnit.MovementFinished += ResetTurn;
             ClearOldSelection();
 
         }
@@ -95,9 +88,9 @@ public class UnitManager : MonoBehaviour
 
     private bool HandleSelectedHexIsUnitHex(Vector3Int hexPosition)
     {
-        if (hexPosition == hexGrid.GetClosestHex(selectedUnit.transform.position))
+        if (hexPosition == _hexGrid.GetClosestHex(_selectedUnit.transform.position))
         {
-            selectedUnit.Deselect();
+            _selectedUnit.Deselect();
             ClearOldSelection();
             return true;
         }
@@ -106,7 +99,7 @@ public class UnitManager : MonoBehaviour
 
     private bool HandleHexOutOfRange(Vector3Int hexPosition)
     {
-        if (movementSystem.IsHexInRange(hexPosition) == false)
+        if (_movementSystem.IsHexInRange(hexPosition) == false)
         {
             Debug.Log("Hex Out of range!");
             return true;

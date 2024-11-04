@@ -5,18 +5,17 @@ using UnityEngine;
 
 public class HexCoordinates : MonoBehaviour
 {
+    [Header("Offset coordinates")]
+    [SerializeField] private Vector3Int _offsetCoordinates;
+
     public static float xOffset = 1f, yOffset = 1, zOffset = 0.75f;
 
     internal Vector3Int GetHexCoords()
-        => offsetCoordinates;
-
-    [Header("Offset coordinates")]
-    [SerializeField]
-    private Vector3Int offsetCoordinates;
+        => _offsetCoordinates;
 
     private void Awake()
     {
-        offsetCoordinates = ConvertPositionToOffset(transform.position);
+        _offsetCoordinates = ConvertPositionToOffset(transform.position);
     }
 
     public static Vector3Int ConvertPositionToOffset(Vector3 position)
