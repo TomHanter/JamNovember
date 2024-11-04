@@ -20,14 +20,12 @@ public class GlowHighlight : MonoBehaviour
     private void Awake()
     {
         PrepareMaterialDictionaries();
-        //_originalGlowColor = _glowMaterial.HasProperty("_Color") ? _glowMaterial.GetColor("_Color") : Color.red;
-        //_originalGlowColor = _glowMaterial.GetColor("_Color");
-
+        _originalGlowColor = _glowMaterial.GetColor("_GlowColor");
     }
 
     private void PrepareMaterialDictionaries()
     {
-        foreach (Renderer renderer in GetComponents<Renderer>())
+        foreach (Renderer renderer in GetComponentsInChildren<Renderer>())
         {
             Material[] originalMaterials = renderer.materials;
             originalMaterialDictionary.Add(renderer, originalMaterials);
