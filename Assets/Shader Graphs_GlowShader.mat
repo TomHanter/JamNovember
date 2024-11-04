@@ -110,7 +110,7 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GlowColor: {r: 0.79622644, g: 0.39230615, b: 0.11868272, a: 0}
+    - _GlowColor: {r: 1.8037735, g: 1.4246769, b: 0.15995719, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1450276703080766754
 MonoBehaviour:

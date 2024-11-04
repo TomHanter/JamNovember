@@ -51,7 +51,7 @@ public class Hex : MonoBehaviour
 
     internal void HighlightPath()
     {
-        //highlight.HighlightValidPath();
+        //highlight.HighlightValidPath();1
     }
 }
 
