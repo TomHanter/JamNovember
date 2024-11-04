@@ -7,7 +7,7 @@ public class UnitManager : MonoBehaviour
     [SerializeField] private HexGrid _hexGrid;
     [SerializeField] private MovementSystem _movementSystem;
     [SerializeField] private Unit _selectedUnit;
-    
+
     private Hex _previouslySelectedHex;
 
     public bool PlayersTurn { get; private set; } = true;
@@ -72,18 +72,22 @@ public class UnitManager : MonoBehaviour
 
     private void HandleTargetHexSelected(Hex selectedHex)
     {
-        if (_previouslySelectedHex == null || _previouslySelectedHex != selectedHex)
-        {
-            _previouslySelectedHex = selectedHex;
-            _movementSystem.ShowPath(selectedHex.HexCoords, this._hexGrid);
-        }
-        else
-        {
-            _movementSystem.MoveUnit(_selectedUnit, this._hexGrid);
-            PlayersTurn = false;
-            _selectedUnit.MovementFinished += ResetTurn;
-            ClearOldSelection();
-        }
+        //if (_previouslySelectedHex == null || _previouslySelectedHex != selectedHex)
+        //{
+        _previouslySelectedHex = selectedHex;
+        _movementSystem.ShowPath(selectedHex.HexCoords, this._hexGrid);
+        _movementSystem.MoveUnit(_selectedUnit, this._hexGrid);
+        PlayersTurn = false;
+        _selectedUnit.MovementFinished += ResetTurn;
+        ClearOldSelection();
+        //}
+        //else
+        //{
+        //    _movementSystem.MoveUnit(_selectedUnit, this._hexGrid);
+        //    PlayersTurn = false;
+        //    _selectedUnit.MovementFinished += ResetTurn;
+        //    ClearOldSelection();
+        //}
     }
 
     private bool HandleSelectedHexIsUnitHex(Vector3Int hexPosition)
