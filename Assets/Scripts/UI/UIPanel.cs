@@ -5,11 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class UIPanel : MonoBehaviour
 {
+    
     [SerializeField] private GameObject _panelWin;
     [SerializeField] private GameObject _panelLose;
-    [SerializeField] private GameObject _soundIcon;
+    [SerializeField] private  GameObject _soundIcon;
     private float _restartDelay = 0.5f;
-    private bool _soundIsOn = true;
+    private static bool _soundIsOn = true;
+
+    private void Awake()
+    {
+
+        LoadMusicState();
+
+        if (!_soundIsOn)
+        {
+            _soundIcon.SetActive(false);
+            AudioListener.volume = 0f;
+
+        }
+        else if (_soundIsOn)
+        {
+            _soundIcon.SetActive(true);
+            AudioListener.volume = 1.0f;
+        }
+    }
 
     public void Win()
     {
@@ -32,7 +51,7 @@ public class UIPanel : MonoBehaviour
     }
 
     public void OnButtonOffSound()
-    {
+    { 
         if (!_soundIsOn)
         {
             _soundIcon.SetActive(true);
@@ -45,10 +64,24 @@ public class UIPanel : MonoBehaviour
             AudioListener.volume = 0f;
             _soundIsOn = false;
         }
+
+        SaveMusicState(_soundIsOn);
     }
 
     public void ResetScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void SaveMusicState(bool isMusicOn)
+    {
+        PlayerPrefs.SetInt("MusicState", isMusicOn ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    public bool LoadMusicState()
+    {
+        return PlayerPrefs.GetInt("MusicState", 1) == 1; // 1 по умолчанию, если данных нет
+    }
+
 }

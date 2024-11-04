@@ -11,12 +11,15 @@ public class WhatCell : MonoBehaviour
     [SerializeField] private int _HpPlus = 5;
     private UIPanel _uiPanel;
     private HexogenChange _changeMesh;
+    private Rigidbody _rb;
     private int hp = 3;
 
     private void Awake()
     {
         _uiPanel = Camera.main.GetComponent<UIPanel>();
         _changeMesh = GetComponent<HexogenChange>();
+        _rb = gameObject.GetComponent<Rigidbody>();
+
         if (_changeMesh == null)
         {
             Debug.LogWarning("HexogenChange component not found on this object. Make sure to assign it.");
@@ -64,7 +67,7 @@ public class WhatCell : MonoBehaviour
 
             case "LavaPlusHp":
                 Destroy(collision.gameObject);
-                    break;
+                break;
 
             default:
                 HandleDefaultCollision(collision.gameObject);
@@ -104,6 +107,7 @@ public class WhatCell : MonoBehaviour
     {
         Debug.Log("player die");
         _uiPanel.Lose();
+        
         // Логика для обработки усиления, например, увеличение силы или скорости
     }
 
@@ -118,4 +122,5 @@ public class WhatCell : MonoBehaviour
         Debug.Log("Collision with undefind collider");
         // Логика для неизвестных объектов
     }
+
 }
