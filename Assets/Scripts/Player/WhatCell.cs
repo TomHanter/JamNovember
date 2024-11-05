@@ -111,15 +111,8 @@ public class WhatCell : MonoBehaviour
     private void Die(GameObject obj = null)
     {
         Debug.Log("player die");
-        if (obj != null)
-        {
-            _uiPanel.Lose();
-        }
-        else
-        {
-            this.gameObject.SetActive(false);
-            _uiPanel.Lose();
-        }
+        this.gameObject.SetActive(false);
+        _uiPanel.Lose();
         // Логика для обработки усиления, например, увеличение силы или скорости
     }
 
