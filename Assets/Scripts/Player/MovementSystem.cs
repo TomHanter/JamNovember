@@ -30,6 +30,9 @@ public class MovementSystem : MonoBehaviour
             Debug.Log(hexPosition);
             hexGrid.GetTileAt(hexPosition).EnableHighlight();
         }
+        //Debug.Log("range created");
+
+
     }
 
     public void CalcualteRange(Unit selectedUnit, HexGrid hexGrid)

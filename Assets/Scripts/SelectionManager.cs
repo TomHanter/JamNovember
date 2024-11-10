@@ -33,7 +33,7 @@ public class SelectionManager : MonoBehaviour
 
             TerrainSelected?.Invoke(result);
             //_animator.SetBool("isWalk", true);
-            Debug.Log("tile");
+            //Debug.Log("tile");
             //if (UnitSelected(result))
             //{
             //    Debug.Log("unit");

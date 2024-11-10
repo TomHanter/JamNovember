@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.Rendering.DebugUI;
 
 public class HexCoordinates : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class HexCoordinates : MonoBehaviour
 
     public static Vector3Int ConvertPositionToOffset(Vector3 position)
     {
-        int x = Mathf.CeilToInt(position.x / xOffset);
+        int x = Mathf.CeilToInt((float)Math.Round(position.x / xOffset, 3));
         int y = Mathf.RoundToInt(position.y / yOffset);
         int z = Mathf.RoundToInt(position.z / zOffset);
         return new Vector3Int(x, y, z);

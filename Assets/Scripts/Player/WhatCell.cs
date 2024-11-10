@@ -54,6 +54,7 @@ public class WhatCell : MonoBehaviour
         {
             case "LavaCell"://хп жизни
                 collision.gameObject.tag = "FireCell";
+                _changeMesh.ReplaceObjectAtPosition(collision.gameObject);
                 HealPlayer();
                 break;
 
@@ -62,7 +63,7 @@ public class WhatCell : MonoBehaviour
 
             case "GrassCell":// нейтральный блок меняется на лава блок + получения урона
                 TakeDamage();
-                Debug.Log($"gameObject = {collision.gameObject}");
+                //Debug.Log($"gameObject = {collision.gameObject}");
                 _changeMesh.ReplaceObjectAtPosition(collision.gameObject);
                 break;
 
