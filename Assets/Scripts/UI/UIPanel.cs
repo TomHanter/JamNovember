@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class UIPanel : MonoBehaviour
 {
@@ -9,6 +10,10 @@ public class UIPanel : MonoBehaviour
     [SerializeField] private GameObject _panelWin;
     [SerializeField] private GameObject _panelLose;
     [SerializeField] private  GameObject _soundIcon;
+
+    [SerializeField] private VideoPlayer _videoPlayer;
+    [SerializeField] private Canvas _canvas;
+
     private float _restartDelay = 0.5f;
     private static bool _soundIsOn = true;
 
@@ -48,7 +53,7 @@ public class UIPanel : MonoBehaviour
 
     public void Win()
     {
-        _panelWin.SetActive(true);
+       StartCoroutine(WinScreen());
     }
 
     public void Lose()
@@ -64,6 +69,10 @@ public class UIPanel : MonoBehaviour
     public void OnButtonCloseGame() 
     {
         Application.Quit();
+    }
+    public void OnButtonStartGame()
+    {
+        SceneManager.LoadScene(2);
     }
 
     public void OnButtonOffSound()
@@ -87,6 +96,16 @@ public class UIPanel : MonoBehaviour
     public void ResetScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private IEnumerator WinScreen()
+    {
+        _videoPlayer.Play();
+        _canvas.enabled = false;
+        yield return new WaitForSeconds(5);
+        _canvas.enabled = true;
+        _panelWin.SetActive(true);
+        Destroy(_videoPlayer.gameObject);
     }
 
     public void SaveMusicState(bool isMusicOn)
