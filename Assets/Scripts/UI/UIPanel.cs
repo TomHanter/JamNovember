@@ -6,7 +6,9 @@ using UnityEngine.Video;
 
 public class UIPanel : MonoBehaviour
 {
-    
+    [SerializeField] private GameObject _mainMenu;
+    [SerializeField] private GameObject _selesctLvl;
+
     [SerializeField] private GameObject _panelWin;
     [SerializeField] private GameObject _panelLose;
     [SerializeField] private  GameObject _soundIcon;
@@ -61,6 +63,12 @@ public class UIPanel : MonoBehaviour
         _panelLose.SetActive(true);
     }
 
+    public void OnButtonStartGame()
+    {
+        _mainMenu.SetActive(false);
+        _selesctLvl.SetActive(true);
+    }
+
     public void OnButtonResetScene()
     {
         Invoke(nameof(ResetScene), _restartDelay);
@@ -89,6 +97,11 @@ public class UIPanel : MonoBehaviour
         SaveMusicState(_soundIsOn);
     }
 
+    public void OnButtonSelectScene(string LevelName)
+    {
+        SceneManager.LoadScene(LevelName);
+    }
+
     public void ResetScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -114,5 +127,7 @@ public class UIPanel : MonoBehaviour
     {
         return PlayerPrefs.GetInt("MusicState", 1) == 1; // 1 по умолчанию, если данных нет
     }
+
+    
 
 }

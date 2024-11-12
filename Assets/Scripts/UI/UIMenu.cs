@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class UIMenu : MonoBehaviour
 {
 
-    [SerializeField] private GameObject _soundIcon;
+    [SerializeField] private GameObject _mainMenu;
+    [SerializeField] private GameObject _selesctLvl;
 
     private void Update()
     {
@@ -23,7 +24,13 @@ public class UIMenu : MonoBehaviour
 
     public void OnButtonStartGame()
     {
-        SceneManager.LoadScene(2);
+        _mainMenu.SetActive(false);
+        _selesctLvl.SetActive(true);
+    }
+
+    public void OnButtonSelectLvl(string LevelName)
+    {
+        SceneManager.LoadScene(LevelName);
     }
 
 }
