@@ -51,11 +51,21 @@ public class UIPanel : MonoBehaviour
         {
             OnButtonOffSound();
         }
+
+        if (_videoPlayer != null && _videoPlayer.isPlaying == true && Input.anyKey) 
+        {
+            Debug.Log("unlack");
+            StopCoroutine(WinScreen());
+            Destroy(_videoPlayer.gameObject);
+            _canvas.enabled = true;
+            _panelWin.SetActive(true);
+        }
     }
 
     public void Win()
     {
        StartCoroutine(WinScreen());
+
     }
 
     public void Lose()
