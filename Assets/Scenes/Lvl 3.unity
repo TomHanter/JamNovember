@@ -1545,7 +1545,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0036010742, y: 0.0049438477}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 3440, y: 1440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &190327640
 MonoBehaviour:
@@ -3680,7 +3680,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 3440, y: 1440}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
@@ -6927,7 +6927,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.47450984, b: 0.6509804, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -15622,7 +15622,6 @@ SceneRoots:
   - {fileID: 188140988}
   - {fileID: 848712863}
   - {fileID: 313443022}
-  - {fileID: 450214010}
   - {fileID: 1255229869}
   - {fileID: 2116670664}
   - {fileID: 408781067}
@@ -15633,3 +15632,4 @@ SceneRoots:
   - {fileID: 1336711929}
   - {fileID: 1069905157}
   - {fileID: 1795163993}
+  - {fileID: 450214010}
